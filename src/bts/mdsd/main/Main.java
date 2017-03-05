@@ -6,7 +6,7 @@ import java.util.List;
 public class Main {
 		
 	public static void main(String[] args) throws IOException {
-		List<CustomerOrder> orders = ReadOrders.fileToOrders("/Users/hilda/Workspace/JavaFoundAssignment/src/bts/mdsd/main/online_order_sample.csv");
+		List<CustomerOrder> orders = ReadOrders.fileToOrders(Main.class.getResource("online_order_sample.csv").getPath());
 		List<Dish> dishes = ReadOrders.ordersToDishes(orders);
 		RestaurantOperations op = new RestaurantOperations();
 		
